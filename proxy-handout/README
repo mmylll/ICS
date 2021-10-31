@@ -1,0 +1,71 @@
+#####################################################################
+# CS:APP Proxy Lab
+# Driver source files
+#
+# Copyright (c) 2016, R. Bryant and D. O'Hallaron, All rights reserved.
+######################################################################
+
+***********
+1. Overview
+***********
+
+This directory contains the source files for the Proxy Lab driver
+program, called driver.sh. The proxy driver runs the student's Web
+proxy and a precompiled version of the Tiny Web server as child
+processes, and then tests the proxy by sending it HTTP GET requests
+for the Tiny server.
+
+The driver performs three basic tests:
+
+1. Basic Correctness (40 points)
+
+The driver fetches five files directly from Tiny and stores them in
+the .noproxy directory. Then it fetches the same five files via the
+proxy and stores them in the .proxy directory. It awards 8 points for
+each pair of matching files.
+
+2. Concurrency (15 points)
+
+The driver does a simple test for head of line blocking. first
+establishes an idle connection with the proxy. If the proxy isn't
+concurrent it is now blocked from accepting other connections. The
+driver then attempts to fetch a file via the proxy.
+
+3. Caching (15 points)
+
+The driver fetches some files from Tiny via the proxy, kills Tiny,
+then attempts the same files from Tiny via the proxy.
+
+
+********
+2. Files
+********
+
+README-handout
+Makefile-handout
+	The README and Makefile that the students get		
+
+proxy.c-handout
+csapp.c-handout
+csapp.h-handout
+	The code handed out to the students (proxy.c-handout is 
+	an empty code skeleton, csapp.{c,h} are from the CS:APP text.)
+
+proxy.c
+cache.c
+csapp.h
+csapp.c
+        Reference solution
+
+driver.sh
+free-port.sh
+nop-server.py
+port-for-user.pl
+        Driver code and support programs
+
+tiny/
+	Code and files for the Tiny server
+
+
+
+
