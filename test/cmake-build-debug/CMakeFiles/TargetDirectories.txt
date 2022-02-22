@@ -1,3 +1,0 @@
-E:/project/ICS/test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-E:/project/ICS/test/cmake-build-debug/CMakeFiles/test.dir
-E:/project/ICS/test/cmake-build-debug/CMakeFiles/edit_cache.dir
